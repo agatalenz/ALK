@@ -5,24 +5,25 @@
 
 def generateChains1(n, k):
     
-    first = [1] * n
-    print(first)
+    minValue = 1
+    first = [minValue] * n
 
     current = first
-    x = n - 1
+    i = n - 1
 
-    while current[x] < k:
+    while not current == [k] * n:
 
-        current[x] += 1
-        current[x+1:] = [1] * (n - x - 1)
-        x = n - 1
+        if current[i] < k:
+            print(current)
+            current[i] += 1
+            current[i+1:] = [minValue] * (n - i - 1)
+            i = n - 1       
+        else:
+            i -= 1
+            if i < 0:
+                i = n - 1
 
-        while current[x] == k and x > 0:
-            x -= 1
-            if x < 0:
-                x = n - 1
-
-        print(current)
+    print(current)
 
 #generateChains1(4,3) 
 
@@ -33,23 +34,24 @@ def generateChains1(n, k):
 
 def generateChains2(n):
 
-    first = [1] * n
+    minValue = 1
+    first = [minValue] * n
     print(first)
 
     current = first
-    x = n
+    i = n - 1
 
-    while current[x-1] < x:
+    while current[i] < i+1:
 
-        current[x-1] += 1
-        current[x:] = [1] * (n - x)
-        x = n
+        current[i] += 1
+        current[i+1:] = [minValue] * (n - i - 1)
+        i = n - 1
 
-        while current[x-1] == x and x > 1:
-            x -= 1
-            if x < 1:
-                x = n
-
+        while current[i] == i+1 and i > 0:
+            i -= 1
+            if i < 0:
+                i = n - 1
+            
         print(current)
 
 #generateChains2(4)
@@ -60,10 +62,68 @@ def generateChains2(n):
 # zbudowane z liczb od 1 do k (zakładamy, że k­>=n). 
 # Pierwszy ciąg to (1,2, . . . , n), a ostatni to (k−n+ 1, . . . , k−1, k).
 
+def generateChains3(n, k):  ### COŚ TU NIE DZIAŁA :((
+
+    minValue = 1
+    first = [x for x in range(minValue, n+1)] 
+    print(first)
+
+    current = first
+    i = n - 1
+
+    while current[i] < k - n + i + 1:
+       
+            current[i] += 1
+            minValue = current[i] + 1
+            current[i+1:] = [minValue] * (n - i - 1) 
+            i = n - 1
+
+            while current[i] == k - n + i + 1 and i > 0:
+                    i -= 1
+                    if i < 0:
+                        i = n - 1   
+
+            if i < n-1 and current[i] < current[i+1]:
+                print(current)
+            
+
+#generateChains3(4, 5)
+
 # --------------------------------------------------------------------------------------------
 # Zadanie 4
 # Napisz program generujący wszystkie podzbiory zbioru {1,2, . . . , n}, 
 # wykorzystując bijekcję między ciągami binarnymi długości n a tymi podzbiorami.
 
+def printChain(current, n):
+    chain = []
+    for i in range(n):
+        if current[i] == 1:
+            chain.append(i+1)
+    print(chain)
 
-    
+
+def generateChains4(n):
+
+    k = 2
+    minValue = 1
+    first = [minValue] * n
+
+    current = first
+    i = n - 1
+
+    while not current == [k] * n:
+
+        if current[i] < k:
+            printChain(current, n)
+            current[i] += 1
+            current[i+1:] = [minValue] * (n - i - 1)
+            i = n - 1       
+        else:
+            i -= 1
+            if i < 0:
+                i = n - 1
+
+    printChain(current, n)
+
+
+#generateChains4(4)
