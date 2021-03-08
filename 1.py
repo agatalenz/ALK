@@ -125,5 +125,4 @@ def generateChains4(n):
 
     printChain(current, n)
 
-
 #generateChains4(4)
