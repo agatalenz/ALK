@@ -69,3 +69,20 @@ def getSubset(n, rank):
 # Napisz program generujący w porządku leksykograficznym wszystkie ciągi długości n zbudowane z liczb od 1 do k. 
 # Użyj algorytmu rekurencyjnego (nie używaj algorytmu następnika).
 
+def generateChainsRecursively(n, k, current, pos):
+
+    if pos == n:
+        print(current)
+    else:
+        for i in range(k):
+            current[pos] = i + 1
+            generateChainsRecursively(n, k, current, pos+1)
+
+
+def generateChains(n, k):
+
+    first = [1] * n
+    generateChainsRecursively(n, k, first, 0)
+
+
+#generateChains(3,4)
