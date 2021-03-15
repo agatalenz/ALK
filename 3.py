@@ -45,7 +45,7 @@ def generateSubsets(n):
     _next = getNext(current)
 
     while(current != _next):
-               
+
         print(binaryToSubset(current))
         current = _next
         _next = getNext(_next)
@@ -59,9 +59,70 @@ def generateSubsets(n):
 # Napisz program obliczający rangę podzbioru T⊂{1, . . . , n} 
 # w uporządkowaniu minimalnych zmian (Graya) podzbiorów zbioru {1, . . . , n}.
 
+# zamień podzbiór zbioru {1, . . . , n} na odpowiadający mu ciąg binarny
+def subsetToBinary(subset, n):
+
+    binary = [0] * n
+    for i in range(n):
+        if subset.count(i+1) == 1:
+            binary[i] = 1
+        else:
+            binary[i] = 0
+    return binary
+
+# zamień ciąg binarny na wartość dziesiętną
+def getDecimal(binary):
+
+    p = len(binary)
+    decimal = 0
+
+    for i in range(p):
+        decimal += binary[i] * 2 ** (p-i-1)
+
+    return decimal
+
+# oblicz rangę podzbioru T⊂{1, . . . , n} w uporządkowaniu Graya
+def getRank(T, n):
+
+    binRank = []
+    prevBit = 0
+    binary = subsetToBinary(T, n)
+
+    for i in range(n):
+        binRank.append(binary[i] ^ prevBit)
+        prevBit = binRank[i]
+
+    print(getDecimal(binRank))
+    
+
+#getRank([1,3], 4)
 
 
 # --------------------------------------------------------------------------------------------
 # Zadanie 3
 # Napisz program wyznaczający podzbiór T o zadanej pozycji r 
 # w uporządkowaniu minimalnych zmian (Graya) podzbiorów zbioru {1, . . . , n}.
+
+# zamień liczbę dziesiętną na ciąg binarny o zadanej długości
+def getBinary(decimal, n):
+
+    binary = [0] * n
+
+    for i in range(n):
+        if decimal - 2 **  (n-i-1) >= 0:
+            binary[i] = 1
+            decimal -= 2 ** (n-i-1)
+
+    return binary
+
+# znajdź podzbiór zbioru {1, . . . , n} o zadanej randze w uporządkowaniu Graya
+def getSubset(rank, n):
+
+    binRank = getBinary(rank, n)
+    divRank = getBinary(rank/2, n)
+    xorRank = [b1 ^ b2 for b1, b2 in zip(binRank, divRank)]
+
+    print(binaryToSubset(xorRank))
+
+
+#getSubset(12, 4)
