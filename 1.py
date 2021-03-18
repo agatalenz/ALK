@@ -3,6 +3,8 @@
 # Napisz program generujący w porządku leksykograficznym wszystkie ciągi długości n 
 # zbudowane z liczb od 1 do k (użyj algorytmu iteracyjnego).
 
+# OK
+
 def generateChains1(n, k):
     
     minValue = 1
@@ -62,7 +64,10 @@ def generateChains2(n):
 # zbudowane z liczb od 1 do k (zakładamy, że k­>=n). 
 # Pierwszy ciąg to (1,2, . . . , n), a ostatni to (k−n+ 1, . . . , k−1, k).
 
-def generateChains3(n, k):  ### COŚ TU NIE DZIAŁA :((
+# błędne wpisywanie wartości "minimalnych" (powinny być rosnące); 
+# druga pętla while nieskutecznie próbuje to naprawić
+
+def generateChains3(n, k):  
 
     minValue = 1
     first = [x for x in range(minValue, n+1)] 
@@ -93,6 +98,8 @@ def generateChains3(n, k):  ### COŚ TU NIE DZIAŁA :((
 # Zadanie 4
 # Napisz program generujący wszystkie podzbiory zbioru {1,2, . . . , n}, 
 # wykorzystując bijekcję między ciągami binarnymi długości n a tymi podzbiorami.
+
+# OK
 
 def printChain(current, n):
     chain = []

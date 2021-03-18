@@ -3,6 +3,8 @@
 # Napisz program obliczający pozycję podzbioru T ⊂ {1, . . . , n} w uporządkowaniu leksyko-graficznym
 # (według wektorów charakterystycznych) podzbiorów zbioru {1, . . . , n}.
 
+# nie działa na podzbiorach, które nie zawierają elementu n
+
 def getDecimal(binary):
 
     p = len(binary)
@@ -37,6 +39,8 @@ def getRank(n, T):
 # Napisz program wyznaczający podzbiór T o zadanej pozycji r w uporządkowaniu leksyko-graficznym 
 # według wektorów charakterystycznych) podzbiorów zbioru 1, . . . , n}.
 
+# OK
+
 def getBinary(n, decimal):
 
     binary = [0] * n
@@ -68,6 +72,8 @@ def getSubset(n, rank):
 # Zadanie 3
 # Napisz program generujący w porządku leksykograficznym wszystkie ciągi długości n zbudowane z liczb od 1 do k. 
 # Użyj algorytmu rekurencyjnego (nie używaj algorytmu następnika).
+
+# OK
 
 def generateChainsRecursively(n, k, current, pos):
 
