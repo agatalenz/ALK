@@ -4,6 +4,8 @@
 # w porządku minimalnych zmian (Graya), 
 # wykorzystując wagi Hamminga lub różnicę symetryczną zbiorów.
 
+# brakuje ostatniego zbioru
+
 # zamień bit na wskazanej pozycji
 def switchBit(binary, index):
     
@@ -59,6 +61,8 @@ def generateSubsets(n):
 # Napisz program obliczający rangę podzbioru T⊂{1, . . . , n} 
 # w uporządkowaniu minimalnych zmian (Graya) podzbiorów zbioru {1, . . . , n}.
 
+# OK
+
 # zamień podzbiór zbioru {1, . . . , n} na odpowiadający mu ciąg binarny
 def subsetToBinary(subset, n):
 
@@ -102,6 +106,8 @@ def getRank(T, n):
 # Zadanie 3
 # Napisz program wyznaczający podzbiór T o zadanej pozycji r 
 # w uporządkowaniu minimalnych zmian (Graya) podzbiorów zbioru {1, . . . , n}.
+
+# OK
 
 # zamień liczbę dziesiętną na ciąg binarny o zadanej długości
 def getBinary(decimal, n):
