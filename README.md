@@ -13,8 +13,14 @@
 2. Napisz program wyznaczający podzbiór T o zadanej pozycji r w uporządkowaniu leksyko-graficznym według wektorów charakterystycznych) podzbiorów zbioru 1, . . . , n}.
 3. Napisz program generujący w porządku leksykograficznym wszystkie ciągi długości n zbudowane z liczb od 1 do k. Użyj algorytmu rekurencyjnego (nie używaj algorytmu następnika).
 
-# [3.py](https://git.wmi.amu.edu.pl/s444426/ALK/src/branch/master/1.py) Kod Graya
+# [3.py](https://git.wmi.amu.edu.pl/s444426/ALK/src/branch/master/3.py) Kod Graya
 
 1. Napisz program generujący wszystkie podzbiory zbioru {1, . . . , n} w porządku minimalnych zmian (Graya), wykorzystując wagi Hamminga lub różnicę symetryczną zbiorów.
 2. Napisz program obliczający rangę podzbioru T⊂{1, . . . , n} w uporządkowaniu minimalnych zmian (Graya) podzbiorów zbioru {1, . . . , n}.
 3. Napisz program wyznaczający podzbiór T o zadanej pozycji r w uporządkowaniu minimalnych zmian (Graya) podzbiorów zbioru {1, . . . , n}.
+
+# [4.py](https://git.wmi.amu.edu.pl/s444426/ALK/src/branch/master/4.py) Podzbiory k-elementowe
+
+1. Napisz program wyznaczający następnik k-elementowego podzbioru T zbioru {1, . . . , n} w uporządkowaniu leksykograficznym podzbiorów k-elementowych.
+2. Napisz program obliczający rangę k-elementowego podzbioru T zbioru {1, . . . , n} w uporządkowaniu leksykograficznym podzbiorów k-elementowych.
+3. Napisz program wyznaczający podzbiór T o randze r w uporządkowaniu leksykograficznym k-elementowych podzbiorów zbioru {1, . . . , n}.
