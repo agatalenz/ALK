@@ -24,3 +24,13 @@
 1. Napisz program wyznaczający następnik k-elementowego podzbioru T zbioru {1, . . . , n} w uporządkowaniu leksykograficznym podzbiorów k-elementowych.
 2. Napisz program obliczający rangę k-elementowego podzbioru T zbioru {1, . . . , n} w uporządkowaniu leksykograficznym podzbiorów k-elementowych.
 3. Napisz program wyznaczający podzbiór T o randze r w uporządkowaniu leksykograficznym k-elementowych podzbiorów zbioru {1, . . . , n}.
+
+# [5.py](https://git.wmi.amu.edu.pl/s444426/ALK/src/branch/master/5.py) Liczby Stirlinga
+
+1. Napisz program obliczający za pomocą programowania dynamicznego wartości liczb Stirlinga drugiego rodzaju ze wzoru: S(n, k) = kS(n−1, k) + S(n−1, k−1), gdzie S(n, n+1) = 0 dla n­>=0, S(n,0) = 0 dla n>=­1 i S(0,0) = 1.
+2. Napisz program obliczający za pomocą programowania dynamicznego wartości liczb Stirlingapierwszego rodzaju ze wzoru:s(n, k) = s(n−1, k−1) − (n−1)s(n−1, k), gdzie s(n, n+ 1) = 0 dla n>=­0 , s(n,0) = 0 dla n>=­1 i s(0,0) = 1.
+3. Napisz program obliczający za pomocą programowania dynamicznego wartości liczb Bella.
+
+# [6.py](https://git.wmi.amu.edu.pl/s444426/ALK/src/branch/master/6.py) Generowanie podziałów zbioru
+
+1. Napisz program realizujący iteracyjny algorytm generowania wszystkich podziałów zbioru {1, . . . , n} za pomocą przenoszenia między blokami elementu aktywnego.

@@ -5,6 +5,8 @@ import scipy.special
 # Napisz program wyznaczający następnik k-elementowego podzbioru T zbioru {1, . . . , n}
 # w uporządkowaniu leksykograficznym podzbiorów k-elementowych.
 
+# OK
+
 # znajdź pozycję, na której element nie ma wartości maksymalnej (jeśli taka istnieje)
 
 def checkMax(chain, maxVals, pos):
@@ -41,6 +43,8 @@ def getNext(n, T):
 # Napisz program obliczający rangę k-elementowego podzbioru T zbioru {1, . . . , n}
 # w uporządkowaniu leksykograficznym podzbiorów k-elementowych.
 
+# OK
+
 def getRank(n, T):
 
     r = 0
@@ -62,6 +66,8 @@ def getRank(n, T):
 # Zadanie 3
 # Napisz program wyznaczający podzbiór T o randze r w uporządkowaniu leksykograficznym
 # k-elementowych podzbiorów zbioru {1, . . . , n}.
+
+# OK
 
 def getSubset(n, k, r):
 
