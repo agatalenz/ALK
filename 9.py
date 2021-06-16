@@ -5,6 +5,8 @@ import numpy as np
 # Napisz program obliczający metodą programowania dynamicznego liczbę podziałów liczby n na k składników,
 # korzystając ze wzoru: P(n, k) = P(n−1, k−1) + P(n−k, k) dla k<=n, gdzie P(0,0) = 1 oraz P(i,0) = 0 dla i > 0.
 
+# OK
+
 
 def getDivsNumber(n, k):
 
@@ -25,6 +27,7 @@ def getDivsNumber(n, k):
 # Zadanie 2
 # Napisz program generujący podział sprzężony do zadanego podziału (a1, . . . , am) liczby n.
 
+# OK
 
 def getConjugateDiv(div):
 
@@ -58,6 +61,7 @@ def getConjugateDiv(div):
 # W powyższym pseudokodzie a1, . . . , am są już wybranymi składnikami podziału,
 # natomiast parametr b jest górnym ograniczeniem wartości następnego generowanego składnika.
 
+# OK
 
 def generateDivsRecursively(a, n, b, m):
 
@@ -83,6 +87,7 @@ def generateDivs(n):
 # Napisz program generujący wszystkie podziały liczby n na k składników.
 # Wykorzystaj algorytmy z zadań 2 i 3.
 
+# OK
 
 def generateDivsRecursively2(a, n, b, m):
 

@@ -4,6 +4,8 @@ import numpy as np
 # Zadanie 1
 # Napisz program generujący następnik permutacji p zbioru {1, . . . , n} w porządku leksykograficznym.
 
+# OK
+
 
 def getNext(p):
 
@@ -54,6 +56,7 @@ def getNext(p):
 # Zadanie 2
 # Napisz program obliczający rangę permutacji p zbioru {1, . . . , n} w porządku leksykograficznym.
 
+# OK
 
 def silnia(n):
 
@@ -87,6 +90,7 @@ def getRank(p):
 # Zadanie 3
 # Napisz program wyznaczający permutację p zbioru {1, . . . , n} o randze r w porządku leksykograficznym.
 
+# OK
 
 def getPerm(n, r):
 

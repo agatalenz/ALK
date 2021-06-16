@@ -4,6 +4,7 @@
 # Za wersję naiwną (z tablicą) można dostać maksymalnie 0.7 punktu, za wersję z kolejką priorytetową maksymalnie 1 punkt.
 # Program powinien wypisaćlistę krawędzi znalezionego drzewa oraz jego łączną wagę.
 
+# Wersja z tablicą. Łączna waga drzewa nie jest wypisana (0.65 pkt).
 
 def MST(E, start):
 

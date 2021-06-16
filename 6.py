@@ -3,7 +3,8 @@
 # Napisz program realizujący iteracyjny algorytm generowania wszystkich podziałów zbioru {1, . . . , n}
 # za pomocą przenoszenia między blokami elementu aktywnego.
 
-# Przyznam się, że niezupełnie rozumiem ten algorytm :(
+# Źle wyszukiwany element aktywny: jeśli warunek jest spełniony, to zmieniamy kierunek elementu (PR) i szukamy dalej.
+# Poza pierwszym krokiem wypisywana jest tablica B, a nie odpowiadający jej podział. (0.5 pkt).
 
 def findActiveElement(n, B, PR):
 
@@ -22,8 +23,9 @@ def generateSubsetsDivs(n):
     B = [1] * n     # B[i] - numer bloku zawierającego element i
     N = [None] * n  # N[i] - numer następnego bloku dla bloku o numerze i
     P = [None] * n  # P[i] - numer poprzedniego bloku dla bloku o numerze i
-    PR = [True] * n # tablica boolowska określająca kierunek poruszania się elementu aktywnego 
-                    # (TRUE => PRAWO; FALSE => LEWO)
+    # tablica boolowska określająca kierunek poruszania się elementu aktywnego
+    PR = [True] * n
+    # (TRUE => PRAWO; FALSE => LEWO)
     j = n           # element aktywny
 
     # krok 1
@@ -57,7 +59,6 @@ def generateSubsetsDivs(n):
 
             # i
             B[j-1] = N[k-1]
-            
 
         else:
 
@@ -81,4 +82,4 @@ def generateSubsetsDivs(n):
         print(B)
 
 
-#generateSubsetsDivs(3)
+# generateSubsetsDivs(3)

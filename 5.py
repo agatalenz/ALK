@@ -2,9 +2,13 @@ import scipy.special
 
 # --------------------------------------------------------------------------------------------
 # Zadanie 1
-# Napisz program obliczający za pomocą programowania dynamicznego wartości liczb Stirlinga drugiego rodzaju ze wzoru: 
-# S(n, k) = kS(n−1, k) + S(n−1, k−1), 
+# Napisz program obliczający za pomocą programowania dynamicznego wartości liczb Stirlinga drugiego rodzaju ze wzoru:
+# S(n, k) = kS(n−1, k) + S(n−1, k−1),
 # gdzie S(n, n+1) = 0 dla n­>=0, S(n,0) = 0 dla n>=­1 i S(0,0) = 1.
+
+# nie działa przez zła inicjalizację tablicy (każda zmiana elementu jest wykonywana we wszystkich wierszach jednocześnie);
+# wypisywana wartość dla n-1,k-1 zamiast dla n,k (0.25 pkt).
+
 
 def appendNumber(S, i, j, n, stirlingType):
 
@@ -21,15 +25,15 @@ def appendNumber(S, i, j, n, stirlingType):
         if stirlingType == 1:
             nextNum = S[i-1][j-1] - (i-1) * S[i-1][j]
         else:
-            nextNum = j * S[i - 1][j] + S[i - 1][j - 1]     
+            nextNum = j * S[i - 1][j] + S[i - 1][j - 1]
         S[i].append(nextNum)
 
 
 def getStirling2(n, k):
-    
+
     if k > n:
         print("Nie ma takiej liczby")
-    
+
     else:
 
         S = [[]] * n
@@ -47,14 +51,16 @@ def getStirling2(n, k):
 # Zadanie 2
 # Napisz program obliczający za pomocą programowania dynamicznego wartości liczb Stirlinga
 # pierwszego rodzaju ze wzoru:
-# s(n, k) = s(n−1, k−1) − (n−1)s(n−1, k), 
+# s(n, k) = s(n−1, k−1) − (n−1)s(n−1, k),
 # gdzie s(n, n+ 1) = 0 dla n>=­0 , s(n,0) = 0 dla n>=­1 i s(0,0) = 1.
+
+# to samo co w zadaniu 1
 
 def getStirling1(n, k):
 
     if k > n:
         print("Nie ma takiej liczby")
-    
+
     else:
 
         S = [[]] * n
@@ -72,6 +78,8 @@ def getStirling1(n, k):
 # Zadanie 3
 # Napisz program obliczający za pomocą programowania dynamicznego wartości liczb Bella.
 
+# OK
+
 def getBellNumber(n):
 
     B = [1]
@@ -85,4 +93,4 @@ def getBellNumber(n):
     print(B[n])
 
 
-#getBellNumber(5)
+# getBellNumber(5)

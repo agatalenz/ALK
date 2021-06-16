@@ -2,6 +2,8 @@
 # Zadanie 1
 # Napisz  program  generujący  funkcję  RGF f:{1, . . . , n} → Z+ odpowiadającą zadanemu podziałowi zbioru {1, . . . , n}.
 
+# brak ustalenia poprawnej kolejności zbiorów, funkcja nie zawsze jest RGF (0.2 pkt).
+
 def getRGF(n, B):
 
     k = len(B)
@@ -12,7 +14,7 @@ def getRGF(n, B):
 
         while f[j-1] != 0:
             j += 1
-        
+
         h = 1
 
         while len(B) > h and not(j in B[h-1]):
@@ -30,6 +32,8 @@ def getRGF(n, B):
 # --------------------------------------------------------------------------------------------
 # Zadanie 2
 # Napisz program generujący podział zbioru {1, . . . , n} odpowiadający zadanej funkcji RGF f:{1, . . . , n} → Z+.
+
+# nie działa przez złą inicjalizację B: zmiana w dowolnym podzbiorze powoduje także zmianę w pozostałych (0.2 pkt).
 
 def getSubsetDivs(f):
 
@@ -55,6 +59,9 @@ def getSubsetDivs(f):
 # --------------------------------------------------------------------------------------------
 # Zadanie 3
 # Napisz program generujący wszystkie funkcje RGF f: {1, . . . , n} → Z+ w porządku leksykograficznym.
+
+# powinno być while f[j-1] == F[j-1].
+# W pierwszej części programu indeksowanie od 0, druga pisana, jakby było od 1, więc sypią się błędy (0.2 pkt).
 
 def generateRGF(n):
 
@@ -83,4 +90,4 @@ def generateRGF(n):
             stop = True
 
 
-#generateRGF(4)
+# generateRGF(4)

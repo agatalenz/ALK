@@ -4,6 +4,8 @@ import math
 # Zadanie 1
 # Napisz program generujący kod Prufera dla zadanego drzewa T o n wierzchołkach.
 
+# stopnie wierzchołków trzeba obliczyć, a nie wpisać w kod (0.3 pkt).
+
 
 # znajdź największy wierzchołek stopnia 1
 
@@ -65,6 +67,8 @@ Tree = {
 # Zadanie 2
 # Napisz program wyznaczający drzewo odpowiadające zadanemu kodowi Prufera L.
 
+# OK
+
 
 # znajdź tablicę stopni wierzchołków
 
@@ -114,6 +118,8 @@ def getTree(L):
 # Zadanie 3
 # Napisz program obliczający rangę kodu Prufera L.
 
+# OK
+
 
 def getRank(L):
 
@@ -137,6 +143,7 @@ def getRank(L):
 # Zadanie 4
 # Napisz program wyznaczający kod Prufera długości n−2 o randze r.
 
+# OK
 
 def generatePruferFromRank(r, n):
 
